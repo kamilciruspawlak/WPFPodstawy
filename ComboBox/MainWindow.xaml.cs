@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ListBox
+namespace ComboBox
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -35,13 +35,14 @@ namespace ListBox
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             if (!string.IsNullOrWhiteSpace(NameToAdd.Text))
-            { 
+            {
                 listOfNames.Add(NameToAdd.Text.Trim());
+                NameToAdd.Text = "";
             }
 
-           
+
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
